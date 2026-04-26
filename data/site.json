@@ -1,0 +1,36 @@
+{
+  "business": {
+    "name": "Lashes by Yuni",
+    "tagline": "Eyes that speak before you do",
+    "logo": "logo-bright.png"
+  },
+  "hero": {
+    "heading": "Lashes by Yuni",
+    "subheading": "Custom lash sets, hand-crafted for your eye shape.",
+    "ctaText": "Book Now",
+    "ctaTab": "book",
+    "backgroundImage": ""
+  },
+  "contact": {
+    "phone": "(555) 555-0123",
+    "email": "lashesbyyuni@gmail.com",
+    "address": "mobile",
+    "mapEmbedUrl": ""
+  },
+  "hours": [
+    { "day": "Monday",    "open": "9:00 AM", "close": "6:00 PM", "closed": false },
+    { "day": "Tuesday",   "open": "9:00 AM", "close": "6:00 PM", "closed": false },
+    { "day": "Wednesday", "open": "9:00 AM", "close": "6:00 PM", "closed": false },
+    { "day": "Thursday",  "open": "9:00 AM", "close": "8:00 PM", "closed": false },
+    { "day": "Friday",    "open": "9:00 AM", "close": "8:00 PM", "closed": false },
+    { "day": "Saturday",  "open": "10:00 AM","close": "5:00 PM", "closed": false },
+    { "day": "Sunday",    "open": "",        "close": "",        "closed": true  }
+  ],
+  "social": [
+    { "platform": "Instagram", "handle": "@lashesbyyuni", "url": "https://instagram.com/lashesbyyuni" },
+    { "platform": "TikTok",    "handle": "@lashesbyyuni", "url": "https://tiktok.com/@lashesbyyuni" }
+  ],
+  "formspree": {
+    "formId": "mrerdlak"
+  }
+}

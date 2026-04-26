@@ -1,0 +1,39 @@
+{
+  "currency": "USD",
+  "categories": [
+    {
+      "name": "Classic",
+      "blurb": "Natural, mascara-look enhancement \u2014 one extension per natural lash.",
+      "items": [
+        { "name": "Classic Full Set", "price": 120, "duration": "2 hr",   "description": "A fresh full set tailored to your eye shape." },
+        { "name": "Classic Fill 2 wk", "price": 60,  "duration": "1 hr",   "description": "Refresh within 2 weeks of your last set." },
+        { "name": "Classic Fill 3 wk", "price": 75,  "duration": "1.25 hr","description": "Refresh within 3 weeks of your last set." }
+      ]
+    },
+    {
+      "name": "Hybrid",
+      "blurb": "A 50/50 mix of classic and volume \u2014 textured and full without being dramatic.",
+      "items": [
+        { "name": "Hybrid Full Set",  "price": 150, "duration": "2.5 hr", "description": "Best of both worlds: definition + density." },
+        { "name": "Hybrid Fill 2 wk", "price": 70,  "duration": "1 hr",   "description": "Refresh within 2 weeks." },
+        { "name": "Hybrid Fill 3 wk", "price": 85,  "duration": "1.25 hr","description": "Refresh within 3 weeks." }
+      ]
+    },
+    {
+      "name": "Volume",
+      "blurb": "Hand-made fans for that fluffy, full look.",
+      "items": [
+        { "name": "Volume Full Set",  "price": 180, "duration": "3 hr",   "description": "Light, fluffy fans \u2014 mapped for your eye shape." },
+        { "name": "Volume Fill 2 wk", "price": 80,  "duration": "1 hr",   "description": "Refresh within 2 weeks." },
+        { "name": "Volume Fill 3 wk", "price": 95,  "duration": "1.25 hr","description": "Refresh within 3 weeks." }
+      ]
+    },
+    {
+      "name": "Add-ons & Other",
+      "items": [
+        { "name": "Lash Removal",      "price": 25, "duration": "30 min", "description": "Safe, gentle removal of existing extensions." },
+        { "name": "Bridal / Event Set","price": 200,"duration": "3 hr",   "description": "A wedding-day set with a touch-up the morning of (locally)." }
+      ]
+    }
+  ]
+}

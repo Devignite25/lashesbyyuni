@@ -1,0 +1,34 @@
+[
+  {
+    "id": "set-001",
+    "image": "assets/image1.png",
+    "title": "Wispy Volume",
+    "description": "Hand-made fans, doll-eye mapping.",
+    "tags": ["volume"],
+    "forSale": false
+  },
+  {
+    "id": "set-002",
+    "image": "assets/image2.png",
+    "title": "Hybrid Full Set",
+    "description": "50/50 classic + volume mix.",
+    "tags": ["hybrid"],
+    "forSale": false
+  },
+  {
+    "id": "set-003",
+    "image": "assets/image3.png",
+    "title": "Cat-Eye Classic",
+    "description": "Subtle lift with a soft outer flick.",
+    "tags": ["classic"],
+    "forSale": false
+  },
+  {
+    "id": "set-004",
+    "image": "assets/image4.png",
+    "title": "Mega Volume",
+    "description": "Bold, fluffy fans for big-night looks.",
+    "tags": ["volume"],
+    "forSale": false
+  }
+]

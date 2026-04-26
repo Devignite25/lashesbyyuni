@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lashes by Yuni</title>
+  <meta name="description" content="Custom lash sets by Yuni — classic, hybrid, and volume extensions." />
+  <link rel="icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Lashes by Yuni — home">
+      <img class="brand-logo" data-bind-src="business.logo" alt="" />
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#home"     data-tab="home">Home</a></li>
+        <li><a href="#about"    data-tab="about">About</a></li>
+        <li><a href="#services" data-tab="services">Services</a></li>
+        <li><a href="#gallery"  data-tab="gallery">Gallery</a></li>
+        <li><a href="#contact"  data-tab="contact">Contact</a></li>
+        <li><a href="#book"     data-tab="book" class="nav-cta">Book</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section id="home" class="tab-panel" data-tab="home" aria-labelledby="home-heading">
+      <div class="hero">
+        <div class="hero-bg" data-bind-style="hero.backgroundImage" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <h1 id="home-heading" class="visually-hidden" data-bind="hero.heading">Lashes by Yuni</h1>
+          <img class="hero-logo" data-bind-src="business.logo" alt="" />
+          <p class="hero-sub" data-bind="hero.subheading"></p>
+          <a class="btn btn-primary" data-bind-href="hero.ctaTab" data-bind="hero.ctaText">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="tab-panel" data-tab="about" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <h2 id="about-heading">About</h2>
+          <div id="about-body"></div>
+        </div>
+        <figure class="about-figure">
+          <img id="about-image" alt="" />
+        </figure>
+      </div>
+    </section>
+
+    <section id="services" class="tab-panel" data-tab="services" aria-labelledby="services-heading">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="services-heading">Services &amp; Pricing</h2>
+          <p class="section-sub">All sets include eye-shape mapping &amp; aftercare guidance.</p>
+        </header>
+        <div id="services-list" class="services-list" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="gallery" class="tab-panel" data-tab="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="gallery-heading">Gallery</h2>
+          <p class="section-sub">A few recent sets. Tap an image to see details.</p>
+        </header>
+        <div id="gallery-filters" class="gallery-filters" hidden></div>
+        <div id="gallery-grid" class="gallery-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="tab-panel" data-tab="contact" aria-labelledby="contact-heading">
+      <div class="container contact-grid">
+        <div>
+          <h2 id="contact-heading">Visit &amp; Contact</h2>
+          <ul class="contact-list">
+            <li><span class="contact-label">Phone</span><a id="contact-phone" href="#"></a></li>
+            <li><span class="contact-label">Email</span><a id="contact-email" href="#"></a></li>
+            <li><span class="contact-label">Address</span><span id="contact-address"></span></li>
+          </ul>
+          <h3>Hours</h3>
+          <table class="hours-table">
+            <tbody id="hours-body"></tbody>
+          </table>
+          <h3>Find me online</h3>
+          <ul id="social-list" class="social-list"></ul>
+        </div>
+        <div id="map-wrap" class="map-wrap" hidden></div>
+      </div>
+    </section>
+
+    <section id="book" class="tab-panel" data-tab="book" aria-labelledby="book-heading">
+      <div class="container book-grid">
+        <div class="book-copy">
+          <h2 id="book-heading">Request a Booking</h2>
+          <p>Send your preferred service and date — I'll confirm by email or text within a day.</p>
+        </div>
+
+        <form id="booking-form" class="booking-form" novalidate>
+          <div class="fs-success" data-fs-success hidden>Thanks &mdash; I'll be in touch shortly.</div>
+          <div class="fs-error fs-error-form" data-fs-error></div>
+
+          <label class="field">
+            <span class="field-label">Name</span>
+            <input type="text" name="name" autocomplete="name" required data-fs-field />
+            <span class="fs-error" data-fs-error="name"></span>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Email</span>
+            <input type="email" name="email" autocomplete="email" required data-fs-field />
+            <span class="fs-error" data-fs-error="email"></span>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Phone (optional)</span>
+            <input type="tel" name="phone" autocomplete="tel" data-fs-field />
+            <span class="fs-error" data-fs-error="phone"></span>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Service</span>
+            <select id="booking-service" name="service" required data-fs-field>
+              <option value="">Choose a service…</option>
+            </select>
+            <span class="fs-error" data-fs-error="service"></span>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Preferred date</span>
+            <input type="date" name="preferred_date" data-fs-field />
+            <span class="fs-error" data-fs-error="preferred_date"></span>
+          </label>
+
+          <label class="field field-wide">
+            <span class="field-label">Message</span>
+            <textarea name="message" rows="4" placeholder="Anything I should know? First-time client, allergies, eye sensitivity, event date…" data-fs-field></textarea>
+            <span class="fs-error" data-fs-error="message"></span>
+          </label>
+
+          <button class="btn btn-primary btn-submit" type="submit" data-fs-submit-btn>Request Booking</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img class="footer-logo" data-bind-src="business.logo" alt="" />
+      <span class="footer-tagline" data-bind="business.tagline"></span>
+    </div>
+  </footer>
+
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -31,8 +31,7 @@
     {
       "name": "Add-ons & Other",
       "items": [
-        { "name": "Lash Removal",      "price": 25, "duration": "30 min", "description": "Safe, gentle removal of existing extensions." },
-        { "name": "Bridal / Event Set","price": 200,"duration": "3 hr",   "description": "A wedding-day set with a touch-up the morning of (locally)." }
+        { "name": "Lash Removal",      "price": 25, "duration": "30 min", "description": "Safe, gentle removal of existing extensions." }
       ]
     }
   ]

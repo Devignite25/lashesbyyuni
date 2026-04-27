@@ -50,6 +50,14 @@ function formatPrice(amount, currency) {
   }
 }
 
+function phoneHref(phone) {
+  return 'tel:' + phone.replace(/[^+\d]/g, '');
+}
+
+function socialLabel(social) {
+  return `${social.platform || ''} ${social.handle || ''}`.trim();
+}
+
 /* ---------- declarative bindings (data-bind / data-bind-src / etc.) ---------- */
 function applyBindings(root, data) {
   root.querySelectorAll('[data-bind]').forEach((node) => {
@@ -74,6 +82,33 @@ function applyBindings(root, data) {
 function renderSite(site) {
   applyBindings(document, site);
   document.title = `${site.business.name} — ${site.business.tagline}`;
+}
+
+function renderFooter(site) {
+  const links = document.getElementById('footer-contact-links');
+  if (!links) return;
+
+  const contact = site.contact || {};
+  const social = Array.isArray(site.social) ? site.social : [];
+  const items = [];
+
+  if (contact.phone) {
+    items.push(el('li', {}, el('a', { href: phoneHref(contact.phone) }, contact.phone)));
+  }
+
+  if (contact.email) {
+    items.push(el('li', {}, el('a', { href: 'mailto:' + contact.email }, contact.email)));
+  }
+
+  social.forEach((s) => {
+    const label = socialLabel(s);
+    if (s.url && label) {
+      items.push(el('li', {}, el('a', { href: s.url, target: '_blank', rel: 'noopener' }, label)));
+    }
+  });
+
+  links.hidden = items.length === 0;
+  links.replaceChildren(...items);
 }
 
 function renderAbout(about) {
@@ -101,7 +136,7 @@ function renderContact(site) {
   const phone = document.getElementById('contact-phone');
   if (contact.phone) {
     phone.textContent = contact.phone;
-    phone.href = 'tel:' + contact.phone.replace(/[^+\d]/g, '');
+    phone.href = phoneHref(contact.phone);
   } else {
     phone.parentElement.hidden = true;
   }
@@ -132,7 +167,7 @@ function renderContact(site) {
   socialList.replaceChildren(
     ...social.map((s) =>
       el('li', {},
-        el('a', { href: s.url, target: '_blank', rel: 'noopener' }, `${s.platform} ${s.handle || ''}`.trim())
+        el('a', { href: s.url, target: '_blank', rel: 'noopener' }, socialLabel(s))
       )
     )
   );
@@ -349,6 +384,7 @@ async function boot() {
     state.gallery = gallery;
 
     renderSite(site);
+    renderFooter(site);
     renderAbout(about);
     renderContact(site);
     renderServices(services);

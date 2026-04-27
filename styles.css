@@ -473,16 +473,21 @@ h3 { font-size: 1.15rem; margin: 1.6em 0 0.4em; }
 }
 .footer-dot { color: var(--gold); }
 @media (max-width: 760px) {
-  body { padding-bottom: 7.25rem; }
+  body { padding-bottom: 10.5rem; }
   .footer-logo { height: 78px; max-width: 240px; }
   .footer-contact-links {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
     padding-bottom: calc(0.65rem + env(safe-area-inset-bottom));
   }
+  .footer-contact-links li { width: min(100%, 340px); }
   .footer-contact-links a {
+    justify-content: center;
+    width: 100%;
     padding-inline: 0.72rem;
-    font-size: 0.84rem;
-    white-space: nowrap;
+    font-size: 0.88rem;
+    overflow-wrap: anywhere;
+    text-align: center;
   }
 }
